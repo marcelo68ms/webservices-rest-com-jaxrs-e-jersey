@@ -12,12 +12,12 @@ import br.com.alura.loja.modelo.Projeto;
 @Path("projetos")
 public class ProjetoResource {
 	
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("{id}")
 	public String busca(@PathParam("id") long id ) {
 		Projeto projeto = new ProjetoDAO().busca(id);
-		return projeto.toXML();
+		return projeto.toJson();
 	}
 	
 }
