@@ -12,10 +12,7 @@ public class Servidor {
 
 	
 	public static void main(String[] args) throws IOException {
-		
-		startaServidor();
-	
-
+		startaServidor();	
 	}
 
 	public static HttpServer startaServidor() {
