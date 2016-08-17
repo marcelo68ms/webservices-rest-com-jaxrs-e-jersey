@@ -38,5 +38,5 @@ public class ProjetoTest {
 		
 		Assert.assertEquals("Minha loja", projeto.getNome());
 	}
-
+	
 }
