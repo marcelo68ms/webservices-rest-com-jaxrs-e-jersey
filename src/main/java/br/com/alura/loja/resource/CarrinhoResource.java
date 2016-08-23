@@ -22,12 +22,12 @@ import br.com.alura.loja.modelo.Produto;
 @Path("carrinhos")
 public class CarrinhoResource {
 	
-	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("{id}")
-	public String busca(@PathParam("id") long id) {
+	@Produces(MediaType.APPLICATION_XML)
+	public Carrinho busca(@PathParam("id") long id) {
 		Carrinho carrinho =	new CarrinhoDAO().busca(id);
-		return carrinho.toJson();
+		return carrinho;
 	}
 	
 	@POST
