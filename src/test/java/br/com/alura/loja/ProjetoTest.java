@@ -32,9 +32,7 @@ public class ProjetoTest {
 	public void testarRetornoDoProjeto() {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8080");
-		String conteudo = target.path("/projetos").request().get(String.class);
-		
-		Projeto projeto = (Projeto) new XStream().fromXML(conteudo);
+		Projeto projeto = target.path("/projetos").request().get(Projeto.class);
 		
 		Assert.assertEquals("Minha loja", projeto.getNome());
 	}
